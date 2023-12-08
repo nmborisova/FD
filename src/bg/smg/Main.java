@@ -1,6 +1,7 @@
 package bg.smg;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,11 +46,11 @@ public class Main {
         Collections.sort(dishes);
 
         JFrame frame=new JFrame("FoodInADish");
-        frame.setBackground(Color.WHITE);
         frame.setSize(800,400);
         frame.setLayout(new GridLayout(1, 12));
         for(FoodInADish<Food> currentFD : dishes) {
             JPanel panel = currentFD.draw();
+            panel.setBorder(new LineBorder(Color.RED));
             panel.setBounds(0, 0, currentFD.getWidth(), currentFD.getHeight());
             frame.add(panel);
         }
