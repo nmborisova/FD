@@ -17,9 +17,7 @@ public class Vegetable extends Food {
 
     @Override
     public String toString() {
-        return "Vegetable{" +
-                "isFresh=" + isFresh +
-                '}';
+        return getName();
     }
 
     public boolean isFresh() {

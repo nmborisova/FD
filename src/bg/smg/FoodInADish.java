@@ -39,7 +39,22 @@ public class FoodInADish<T> extends DrawableObject implements Comparable<FoodInA
 
     @Override
     public JPanel draw() {
-        return null;
+        JPanel panel = new JPanel();
+        panel.setBounds(0,0,200,400);
+
+        ImageIcon foodImg = new ImageIcon("resources/"+food+".png");
+        ImageIcon dishImg = new ImageIcon("resources/"+dishColor+".png");
+
+        JLabel foodLabel = new JLabel(foodImg);
+        JLabel dishLabel = new JLabel(dishImg);
+
+        foodLabel.setBounds(0,0,200,200);
+        dishLabel.setBounds(0,200,200, 200);
+
+        panel.add(foodLabel);
+        panel.add(dishLabel);
+
+        return panel;
     }
 
     @Override

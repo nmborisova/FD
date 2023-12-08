@@ -1,6 +1,6 @@
 package bg.smg;
 
-public class Fruit extends Food{
+public class Fruit extends Food implements Comparable<Fruit>{
     private boolean isReadyToEat;
 
     public Fruit(String name, double kg, boolean isReadyToEat) {
@@ -30,8 +30,11 @@ public class Fruit extends Food{
 
     @Override
     public String toString() {
-        return "Fruit{" +
-                "isReadyToEat=" + isReadyToEat +
-                '}';
+        return getName();
+    }
+
+    @Override
+    public int compareTo(Fruit o) {
+        return 0;
     }
 }
